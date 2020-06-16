@@ -1,0 +1,16 @@
+﻿<Window x:Class="secondtryatmaths.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:secondtryatmaths"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Margin="0,130,0,0" Text="Login" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="UserBox" HorizontalAlignment="Center" Margin="0,199,0,0" Text="User Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Name="sub" Content="submit" HorizontalAlignment="Center" Margin="0,294,0,0" VerticalAlignment="Top" Click="sub_click"/>
+        <TextBox x:Name="PasswordBox" HorizontalAlignment="Center" Margin="0,242,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
