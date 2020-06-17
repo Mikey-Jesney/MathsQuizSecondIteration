@@ -41,6 +41,8 @@ namespace secondtryatmaths
 
                 BoxList.ItemsSource = scoreQuery.ToList().Take(20);
 
+                
+
             }
         }
 

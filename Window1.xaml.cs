@@ -33,6 +33,7 @@ namespace secondtryatmaths
             User = UserName;
             Pass = Password;
             loggedUser.Text = UserName;
+            answerbox.Focus();
             Countdown(60, TimeSpan.FromSeconds(1), cur => tb.Content = cur.ToString());
 
 
@@ -69,7 +70,25 @@ namespace secondtryatmaths
 
         }
 
-  
+
+
+       public void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Return)
+            {
+
+                updatescore();
+
+                string numbers = rng();
+
+                getnumbers(numbers);
+
+                answerbox.Text = "";
+
+            }
+
+        }
 
 
 
@@ -89,22 +108,22 @@ namespace secondtryatmaths
 
 
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
 
-            updatescore();
+        //    updatescore();
 
-            string numbers = rng();
+        //    string numbers = rng();
 
-            getnumbers(numbers);
+        //    getnumbers(numbers);
 
-            answerbox.Text = "";
-
-
+        //    answerbox.Text = "";
 
 
 
-        }
+
+
+        //}
 
         private void populate()
         {

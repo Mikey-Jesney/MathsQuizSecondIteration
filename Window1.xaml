@@ -9,8 +9,7 @@
     <Grid>
         <TextBlock Name="box1" HorizontalAlignment="Left" Margin="250,0,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center"/>
         <TextBlock Name="box2" HorizontalAlignment="Left" Margin="496,0,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center"/>
-        <TextBox Name="answerbox" HorizontalAlignment="Center" Margin="0,291,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="521,290,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <TextBox Name="answerbox" KeyDown="OnKeyDownHandler" HorizontalAlignment="Center" Margin="0,291,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock Name="score" HorizontalAlignment="Center" Margin="0,334,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Label Name="tb" HorizontalAlignment="Left" Margin="386,86,0,0" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Center" Text="+" TextWrapping="Wrap" VerticalAlignment="Center"/>
