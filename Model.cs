@@ -21,6 +21,7 @@ namespace secondtryatmaths
     public class User
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int UserId { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }

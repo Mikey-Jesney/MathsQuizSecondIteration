@@ -17,13 +17,13 @@ namespace secondtryatmaths
     /// </summary>
     public partial class Window2 : Window
     {
-        public Window2()
+        public Window2(string UserName, int Score)
         {
             var window1 = this.DataContext;
             InitializeComponent();
+            score.Text = Score.ToString();
+            name.Text = UserName;
         }
-
-
 
     }
 }

@@ -24,10 +24,15 @@ namespace secondtryatmaths
     {
 
         int count = 0;
-        public Window1()
+        string User;
+        string Pass;
+        public Window1(string UserName, string Password)
         {
             InitializeComponent();
             populate();
+            User = UserName;
+            Pass = Password;
+            loggedUser.Text = UserName;
 
 
         }
@@ -61,7 +66,7 @@ namespace secondtryatmaths
         public void endgame()
         {
 
-            Window2 win2 = new Window2();
+            Window2 win2 = new Window2(User, count );
             win2.Show();
             this.Close();
 
