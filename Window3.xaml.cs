@@ -33,16 +33,15 @@ namespace secondtryatmaths
                 from user in db.Users
                 join score in db.Scores
                 on user.UserId equals score.User.UserId
-                select new
+                select new User
                 {
-                    User = user.Name,
-                    UserScore = score.Score
+                    Name = user.Name,
+                    Score = score 
                 };
 
                 BoxList.ItemsSource = scoreQuery.ToList().Take(20);
 
-                
-
+   
             }
         }
 

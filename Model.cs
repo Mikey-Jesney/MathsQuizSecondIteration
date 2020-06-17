@@ -18,7 +18,7 @@ namespace secondtryatmaths
     }
 
 
-    public class User
+    public partial class User
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

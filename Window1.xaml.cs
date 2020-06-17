@@ -34,7 +34,7 @@ namespace secondtryatmaths
             Pass = Password;
             loggedUser.Text = UserName;
             answerbox.Focus();
-            Countdown(60, TimeSpan.FromSeconds(1), cur => tb.Content = cur.ToString());
+            Countdown(3, TimeSpan.FromSeconds(1), cur => tb.Content = cur.ToString());
 
 
         }

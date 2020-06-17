@@ -13,6 +13,9 @@
         <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Center" Margin="0,242,0,0"  VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="244,199,0,0" Text="User Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="244,243,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        
+       
+
 
     </Grid>
 </Window>
