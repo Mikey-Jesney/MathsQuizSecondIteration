@@ -9,7 +9,7 @@
     <Grid>
         <TextBlock HorizontalAlignment="Center" Margin="0,130,0,0" Text="Login" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox x:Name="UserBox" HorizontalAlignment="Center" Margin="0,199,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Name="sub" Content="submit" HorizontalAlignment="Center" Margin="0,294,0,0" VerticalAlignment="Top" Click="sub_click"/>
+        <Button Name="sub" Content="submit and start game" HorizontalAlignment="Center" Margin="0,294,0,0" VerticalAlignment="Top" Click="sub_click"/>
         <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Center" Margin="0,242,0,0"  VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="244,199,0,0" Text="User Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="244,243,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top"/>

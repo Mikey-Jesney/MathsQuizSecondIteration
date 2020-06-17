@@ -32,36 +32,13 @@ namespace secondtryatmaths
         private void sub_click(object sender, RoutedEventArgs e)
         {
 
-            using (var db = new UserDetailsContext())
-            {
-                string _user = UserBox.Text;
-                string _pass = PasswordBox.Password;
                 _userName = UserBox.Text;
                 _password = PasswordBox.Password;
 
 
-                var user = new User()
-                {
-                    Name = _user,
-                    Password = _pass
-                };
-
-                db.Users.Add(user);
-
-                db.SaveChanges();
-
-
-
-
-
-
-
-            }
-
 
             //CheckAndCreate();
             Window1 win1 = new Window1(_userName, _password);
-            win1.DataContext = this;
             win1.Show();
             this.Close();
 

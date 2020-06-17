@@ -13,7 +13,6 @@
         <Button Content="Button" HorizontalAlignment="Left" Margin="521,290,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <TextBlock Name="score" HorizontalAlignment="Center" Margin="0,334,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Label Name="tb" HorizontalAlignment="Left" Margin="386,86,0,0" VerticalAlignment="Top"/>
-        <Button Content="Start" HorizontalAlignment="Left" Margin="371,128,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
         <TextBlock HorizontalAlignment="Center" Text="+" TextWrapping="Wrap" VerticalAlignment="Center"/>
         <TextBlock x:Name="loggedUser" HorizontalAlignment="Left" Margin="111,59,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top"/>
 

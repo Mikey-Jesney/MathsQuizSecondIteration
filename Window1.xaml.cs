@@ -33,15 +33,12 @@ namespace secondtryatmaths
             User = UserName;
             Pass = Password;
             loggedUser.Text = UserName;
-
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
             Countdown(60, TimeSpan.FromSeconds(1), cur => tb.Content = cur.ToString());
 
+
         }
+
+
 
         void Countdown(int count, TimeSpan interval, Action<int> ts)
         {
@@ -66,7 +63,7 @@ namespace secondtryatmaths
         public void endgame()
         {
 
-            Window2 win2 = new Window2(User, count );
+            Window2 win2 = new Window2(User, Pass, count);
             win2.Show();
             this.Close();
 

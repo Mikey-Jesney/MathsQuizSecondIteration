@@ -8,9 +8,10 @@
         Title="Window2" Height="450" Width="800">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="261,249,0,0" Text="final score" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox x:Name="score"  HorizontalAlignment="Center" Margin="0,249,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="288,162,0,0" Text="User Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox x:Name="name" HorizontalAlignment="Left" Margin="400,162,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="259,201,0,0" Text="User Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Save and Continue" HorizontalAlignment="Left" Margin="484,247,0,0" VerticalAlignment="Top" Click="save_click" />
+        <TextBlock x:Name="name" HorizontalAlignment="Left" Margin="354,201,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="score" HorizontalAlignment="Left" Margin="354,249,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
