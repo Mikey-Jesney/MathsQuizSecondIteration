@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:secondtryatmaths"
         mc:Ignorable="d"
-        Title="Questions" Height="450" Width="800" Background="teal">
+        Title="Questions" Height="450" Width="800" Background="teal" >
     <Grid>
         <Rectangle Margin="111,29,112,29" Stroke="LightSalmon">
             <Rectangle.Fill>

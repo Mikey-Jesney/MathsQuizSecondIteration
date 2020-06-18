@@ -96,15 +96,38 @@ namespace secondtryatmaths
 
 
 
+        //public void updatescore()
+        //{
+
+
+        //    if (int.Parse(answerbox.Text) == int.Parse(box1.Text) + int.Parse(box2.Text))
+        //    {
+        //        count++;
+        //        score.Text = count.ToString();
+        //    }
+
+        //}
+
         public void updatescore()
         {
-            if (int.Parse(answerbox.Text) == int.Parse(box1.Text) + int.Parse(box2.Text))
+
+
+            try
             {
-                count++;
-                score.Text = count.ToString();
+                if (int.Parse(answerbox.Text) == int.Parse(box1.Text) + int.Parse(box2.Text))
+                {
+                    count++;
+                    score.Text = count.ToString();
+                }
+            }
+            catch (Exception)
+            {
+                answerbox.Text = "";
             }
 
         }
+
+
 
         private void quitHandler(object sender, RoutedEventArgs e)
 
