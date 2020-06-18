@@ -8,6 +8,7 @@
         Title="Window3" Height="450" Width="800">
     <Grid>
         <ListBox x:Name="BoxList" Margin="212,79,212,79"/>
+        <Button Click="backToLogin" Content="Back to login" HorizontalAlignment="Left" Margin="690,180,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

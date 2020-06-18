@@ -34,7 +34,7 @@ namespace secondtryatmaths
             Pass = Password;
             loggedUser.Text = UserName;
             answerbox.Focus();
-            Countdown(3, TimeSpan.FromSeconds(1), cur => tb.Content = cur.ToString());
+            Countdown(60, TimeSpan.FromSeconds(1), cur => tb.Content = cur.ToString());
 
 
         }
@@ -72,7 +72,7 @@ namespace secondtryatmaths
 
 
 
-       public void OnKeyDownHandler(object sender, KeyEventArgs e)
+        public void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
 
             if (e.Key == Key.Return)
@@ -103,6 +103,15 @@ namespace secondtryatmaths
                 count++;
                 score.Text = count.ToString();
             }
+
+        }
+
+        private void quitHandler(object sender, RoutedEventArgs e)
+
+        {
+
+            endgame();
+
 
         }
 

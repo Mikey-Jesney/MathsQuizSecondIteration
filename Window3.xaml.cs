@@ -24,6 +24,14 @@ namespace secondtryatmaths
             ScoreBox();
         }
 
+        private void backToLogin(object sender, RoutedEventArgs e)
+        {
+            MainWindow win = new MainWindow();
+            win.Show();
+            this.Close();
+
+        }
+
         private void ScoreBox()
         {
             using (var db = new UserDetailsContext())
@@ -39,7 +47,9 @@ namespace secondtryatmaths
                     Score = score 
                 };
 
-                BoxList.ItemsSource = scoreQuery.ToList().Take(20);
+               var newView = scoreQuery.OrderByDescending(x => x.Score.Score);
+
+                BoxList.ItemsSource = newView.ToList().Take(20);
 
    
             }
