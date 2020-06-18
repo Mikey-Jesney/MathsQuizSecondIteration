@@ -5,16 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:secondtryatmaths"
         mc:Ignorable="d"
-        Title="Questions" Height="450" Width="800">
+        Title="Questions" Height="450" Width="800" Background="teal">
     <Grid>
-        <TextBlock Name="box1" HorizontalAlignment="Left" Margin="250,0,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center"/>
-        <TextBlock Name="box2" HorizontalAlignment="Left" Margin="496,0,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center"/>
-        <TextBox Name="answerbox" KeyDown="OnKeyDownHandler" HorizontalAlignment="Center" Margin="0,291,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBlock Name="score" HorizontalAlignment="Center" Margin="0,334,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Rectangle Margin="111,29,112,29" Stroke="LightSalmon">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="teal" Offset="0.0" />
+
+                    <GradientStop Color="DarkSlateGray" Offset="1.0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Name="box1" Foreground="DarkSalmon" FontFamily="MS Gothic" FontSize="30" HorizontalAlignment="Left" Margin="312,145,0,0" Text="20" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Name="box2" Foreground="DarkSalmon" FontFamily="MS Gothic" FontSize="30" HorizontalAlignment="Left" Margin="445,145,0,0" Text="20" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="answerbox" Background="DarkSlateGray" Foreground="DarkSalmon" KeyDown="OnKeyDownHandler" HorizontalAlignment="Left" Margin="398,230,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock Name="score" HorizontalAlignment="Left" Foreground="DarkSalmon" FontFamily="MS Gothic" FontSize="20" Margin="408,321,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Label Name="tb" HorizontalAlignment="Left" Margin="386,86,0,0" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Center" Text="+" TextWrapping="Wrap" VerticalAlignment="Center"/>
-        <TextBlock x:Name="loggedUser" HorizontalAlignment="Left" Margin="111,59,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button Content="quit" Click="quitHandler"  HorizontalAlignment="Left" Margin="601,309,0,0" VerticalAlignment="Top"/>
+        <TextBlock Foreground="DarkSalmon" HorizontalAlignment="Left" FontFamily="MS Gothic" FontSize="30" Text="+" TextWrapping="Wrap" VerticalAlignment="Top" Margin="391,145,0,0"/>
+        <TextBlock x:Name="loggedUser" HorizontalAlignment="Left" Margin="720,334,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="27" RenderTransformOrigin="0.5,0.621"/>
+        <Button Content="quit" Click="quitHandler" Foreground="DarkSalmon" Background="DarkSlateGray" FontFamily="MS Gothic"  HorizontalAlignment="Left" Margin="720,372,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Foreground="DarkSalmon" FontFamily="MS Gothic" FontSize="20" Margin="312,321,0,0" Text="Score :" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Foreground="DarkSalmon" FontFamily="MS Gothic" Margin="297,226,0,0" FontSize="15" Text="Answer: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Foreground="DarkSalmon" FontSize="25" FontFamily="MS Gothic" HorizontalAlignment="Left" Margin="356,71,0,0" Text="What Is" TextWrapping="Wrap" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

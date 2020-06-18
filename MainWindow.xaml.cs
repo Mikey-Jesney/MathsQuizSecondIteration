@@ -43,5 +43,10 @@ namespace secondtryatmaths
             this.Close();
 
         }
+
+        private void UserBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

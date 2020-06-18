@@ -5,10 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:secondtryatmaths"
         mc:Ignorable="d"
-        Title="Window3" Height="450" Width="800">
+        Title="Window3" Height="450" Width="800" Background="teal">
     <Grid>
-        <ListBox x:Name="BoxList" Margin="212,79,212,79"/>
-        <Button Click="backToLogin" Content="Back to login" HorizontalAlignment="Left" Margin="690,180,0,0" VerticalAlignment="Top"/>
+        <Rectangle Stroke="LightSalmon">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="teal" Offset="0.0" />
+
+                    <GradientStop Color="DarkSalmon" Offset="1.0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <ListBox x:Name="BoxList" FontFamily="MS Gothic" FontSize="20" Margin="258,113,258,45" Background="DarkSlateGray" BorderBrush="LightSalmon" Foreground="LightSalmon" BorderThickness="4"/>
+        <Button Click="backToLogin" FontFamily="MS Gothic" Content="Back to login" Foreground="LightSalmon" Background="DarkSlateGray" HorizontalAlignment="Left" Margin="625,369,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Center" FontFamily="MS Gothic" Margin="0,50,0,0" Text="High Scores" Foreground="LightSalmon" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
