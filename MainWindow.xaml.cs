@@ -13,16 +13,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace secondtryatmaths
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
-
-        private string _userName;
-        private string _password;
 
         public MainWindow()
         {
@@ -32,14 +28,8 @@ namespace secondtryatmaths
         private void sub_click(object sender, RoutedEventArgs e)
         {
 
-                _userName = UserBox.Text;
-                _password = PasswordBox.Password;
+            MainWinLogic.SubClick(UserBox.Text, PasswordBox.Password);
 
-
-
-            //CheckAndCreate();
-            Window1 win1 = new Window1(_userName, _password);
-            win1.Show();
             this.Close();
 
         }

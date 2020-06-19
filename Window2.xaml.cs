@@ -40,38 +40,8 @@ namespace secondtryatmaths
         private void save_click(object sender, RoutedEventArgs e)
         {
 
-
-            using (var db = new UserDetailsContext())
-            {
-
-
-                var user = new User()
-                {
-                    Name = _user,
-                    Password = _pass
-                };
-
-                var uScore = new UserScore()
-                {
-                    Score = _score,
-                    User = user
-
-                };
-
-                db.Users.Add(user);
-
-                db.Scores.Add(uScore);
-
-              
-
-                db.SaveChanges();
-            }
-
-
-            Window3 win3 = new Window3();
-            win3.Show();
+            Win2Logic.saveClick(_user, _pass, _score);
             this.Close();
-
 
         }
 

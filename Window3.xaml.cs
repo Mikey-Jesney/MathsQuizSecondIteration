@@ -21,7 +21,7 @@ namespace secondtryatmaths
         public Window3()
         {
             InitializeComponent();
-            ScoreBox();
+            BoxList.ItemsSource = Win3Logic.ScoreBox();
         }
 
         private void backToLogin(object sender, RoutedEventArgs e)
@@ -32,27 +32,29 @@ namespace secondtryatmaths
 
         }
 
-        private void ScoreBox()
-        {
-            using (var db = new UserDetailsContext())
-            {
-                var scoreQuery =
 
-                from user in db.Users
-                join score in db.Scores
-                on user.UserId equals score.User.UserId
-                select new User
-                {
-                    Name = user.Name,
-                    Score = score 
-                };
 
-               var newView = scoreQuery.OrderByDescending(x => x.Score.Score);
+        //private void ScoreBox()
+        //{
+        //    using (var db = new UserDetailsContext())
+        //    {
+        //        var scoreQuery =
 
-                BoxList.ItemsSource = newView.ToList().Take(20);
+        //        from user in db.Users
+        //        join score in db.Scores
+        //        on user.UserId equals score.User.UserId
+        //        select new User
+        //        {
+        //            Name = user.Name,
+        //            Score = score 
+        //        };
 
-   
-            }
-        }
+        //       var newView = scoreQuery.OrderByDescending(x => x.Score.Score);
+
+        //        BoxList.ItemsSource = newView.ToList().Take(20);
+
+
+        //    }
+        //}
     }
 }
