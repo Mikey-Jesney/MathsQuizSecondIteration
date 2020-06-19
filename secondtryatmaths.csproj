@@ -15,9 +15,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="LogicFolder\" />
-    <Folder Include="DatabaseFolder\" />
-  </ItemGroup>
-
 </Project>

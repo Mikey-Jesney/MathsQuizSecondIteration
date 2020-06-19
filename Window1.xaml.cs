@@ -44,6 +44,8 @@ namespace secondtryatmaths
             box2.Text = text[1];
         }
 
+        bool quitted = false;
+
 
         void Countdown(int count, TimeSpan interval, Action<int> ts)
         {
@@ -51,7 +53,7 @@ namespace secondtryatmaths
             dt.Interval = interval;
             dt.Tick += (_, a) =>
             {
-                if (count-- == 0)
+                if (count-- == 0 && quitted == false)
                 {
                     dt.Stop();
                     endgame();
@@ -102,7 +104,10 @@ namespace secondtryatmaths
 
         private void quitHandler(object sender, RoutedEventArgs e)
         {
+            
             endgame();
+            quitted = true;
+
         }
     }
 }

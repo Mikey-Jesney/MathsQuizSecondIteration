@@ -31,30 +31,5 @@ namespace secondtryatmaths
             this.Close();
 
         }
-
-
-
-        //private void ScoreBox()
-        //{
-        //    using (var db = new UserDetailsContext())
-        //    {
-        //        var scoreQuery =
-
-        //        from user in db.Users
-        //        join score in db.Scores
-        //        on user.UserId equals score.User.UserId
-        //        select new User
-        //        {
-        //            Name = user.Name,
-        //            Score = score 
-        //        };
-
-        //       var newView = scoreQuery.OrderByDescending(x => x.Score.Score);
-
-        //        BoxList.ItemsSource = newView.ToList().Take(20);
-
-
-        //    }
-        //}
     }
 }
