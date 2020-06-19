@@ -23,20 +23,34 @@ namespace secondtryatmaths
         public MainWindow()
         {
             InitializeComponent();
+
+
+
         }
+
+
 
         private void sub_click(object sender, RoutedEventArgs e)
         {
 
-            MainWinLogic.SubClick(UserBox.Text, PasswordBox.Password);
+            if (MainWinLogic.CheckAndCreate(UserBox.Text) == false)
+            {
+                MainWinLogic.SubClick(UserBox.Text, PasswordBox.Password);
 
-            this.Close();
-
+                this.Close();
+            }
+            else
+            {
+                UserBox.Text = "Name Already Exists";
+            }
         }
 
         private void UserBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
+
+
+
     }
 }
