@@ -17,7 +17,7 @@ using System.Windows.Threading;
 
 namespace secondtryatmaths
 {
-    class Win1Logic
+    public class Win1Logic
     {
 
 

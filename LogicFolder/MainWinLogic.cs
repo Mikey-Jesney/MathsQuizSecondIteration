@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 
 
-
 namespace secondtryatmaths
 {
     public class MainWinLogic
     {
 
-        public static bool CheckAndCreate(string UserName)
+        public static bool CheckAndCreate(string UserName, string Password)
         {
 
             using (var db = new UserDetailsContext())
@@ -28,31 +27,20 @@ namespace secondtryatmaths
 
             }
 
-
-
         }
+
 
 
 
         public static void SubClick(string username, string password)
         {
-            
-
+ 
                 Window1 win1 = new Window1(username, password);
                 win1.Show();
-
-       
-                
+ 
             }
 
-
-
         }
-
-
-
-
-
 
     }
 
