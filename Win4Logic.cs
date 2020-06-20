@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System; 
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,15 +6,28 @@ using System.Text;
 
 namespace secondtryatmaths
 {
-    public class MainWinLogic
+    public class Win4Logic
     {
+
+        /*
+         * 
+         for users who already have an account
+        logic will check to see if password matches the stored password for that username
+        any errors return "details are incorrect" 
+
+        
+         */
+
 
         public static bool CheckAndCreate(string UserName, string Password)
         {
 
             using (var db = new UserDetailsContext())
+
+
+
             {
-                var MatchCount = db.Users.Count(u => u.Name == UserName);
+                var MatchCount = db.Users.Count(u => u.Name == UserName && u.Password == Password);
                 if (MatchCount > 0)
                 {
                     return true;
@@ -77,29 +90,14 @@ namespace secondtryatmaths
 
 
 
-        public static bool SubClick(string username, string password)
+        public static void SubClick(string username, string password)
         {
 
-
-            using (var db = new UserDetailsContext())
-            {
-                var MatchCount = db.Users.Count(u => u.Name == username);
-                if (MatchCount > 0)
-                {
-                    return true;
-
-                }
-                else
-                {
-                    return false;
-
-                }
-
-            }
+            Window1 win1 = new Window1(username, password);
+            win1.Show();
 
         }
 
     }
 
 }
-

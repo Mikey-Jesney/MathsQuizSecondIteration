@@ -31,9 +31,22 @@ namespace secondtryatmaths
         private void sub_click(object sender, RoutedEventArgs e)
         {
 
-            MainWinLogic.SubClick(UserBox.Text, PasswordBox.Password);
+            if (MainWinLogic.SubClick(UserBox.Text, PasswordBox.Password) == true) {
 
-            this.Close();
+                UserBox.Text = "Username Already Exists";
+
+            }
+            else
+            {
+
+                Window1 win1 = new Window1(UserBox.Text, PasswordBox.Password);
+                win1.Show();
+
+                this.Close();
+
+            }
+
+
 
         }
 
@@ -42,7 +55,15 @@ namespace secondtryatmaths
 
         }
 
+        private void alreadyUser(object sender, RoutedEventArgs e)
+        {
 
+            Window4 win4 = new Window4();
+            win4.Show();
+            this.Close();
 
+        }
+
+        
     }
 }

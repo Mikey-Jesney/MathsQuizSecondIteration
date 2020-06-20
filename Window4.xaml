@@ -5,8 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:secondtryatmaths"
         mc:Ignorable="d"
-        Title="Window4" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="teal" >
+
+
+
+
     <Grid>
-        
+        <Rectangle Margin="221,29,255,29" Stroke="LightSalmon">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="teal" Offset="0.0" />
+
+                    <GradientStop Color="SlateGray" Offset="1.0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <TextBlock FontSize="30" FontFamily="MS Gothic" HorizontalAlignment="Left" Margin="286,51,0,0" Text="MATHS TRAINER" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="LightSalmon" />
+
+        <TextBlock FontSize="25" FontFamily="MS Gothic" HorizontalAlignment="Left" Margin="346,108,0,0" Text="Login" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="LightSalmon" />
+        <TextBox  x:Name="UserBox" Background="DarkSlateGray" Foreground="DarkSalmon" HorizontalAlignment="Left" Margin="400,189,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="UserBox_TextChanged2"/>
+        <Button Foreground="DarkSalmon" FontSize="15" FontFamily="MS Gothic" Background="DarkSlateGray" Name="sub" Content="start game" HorizontalAlignment="Left" Margin="330,314,0,0" VerticalAlignment="Top" Click="sub_click2" Height="52" Width="106">
+            <Button.BitmapEffect>
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
+            </Button.BitmapEffect>
+        </Button>
+
+        <Button Foreground="DarkSalmon" FontSize="10" FontFamily="MS Gothic" Background="DarkSlateGray" Name="backToCreate" Content="Back to create account" HorizontalAlignment="Left" Margin="588,340,0,0" VerticalAlignment="Top" Click="backCreate" Height="26" Width="121">
+            <Button.BitmapEffect>
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
+            </Button.BitmapEffect>
+        </Button>
+
+
+        <PasswordBox Background="DarkSlateGray" x:Name="PasswordBox" Foreground="DarkSalmon" HorizontalAlignment="Left" Margin="400,252,0,0"  VerticalAlignment="Top" Width="120"/>
+        <TextBlock FontSize="20" FontFamily="MS Gothic" Foreground="LightSalmon" HorizontalAlignment="Left" Margin="247,187,0,0" Text="User Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock FontSize="20" FontFamily="MS Gothic" Foreground="LightSalmon" HorizontalAlignment="Left" Margin="247,250,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+
+
+
+
     </Grid>
 </Window>
+
