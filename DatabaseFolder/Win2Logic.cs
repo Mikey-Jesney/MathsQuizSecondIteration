@@ -53,9 +53,6 @@ namespace secondtryatmaths
         public static void testSaveClick(string User, string pass, int score)
         {
 
-
-
-
             using (var db = new UserDetailsContext())
             {
 
@@ -81,9 +78,6 @@ namespace secondtryatmaths
 
                 db.SaveChanges();
             }
-
-
-      
 
 
 
