@@ -40,7 +40,7 @@ namespace secondtryatmaths
         private void save_click(object sender, RoutedEventArgs e)
         {
 
-            Win2Logic.saveClick(_user, _pass, _score);
+            Win2Logic.alteredSaveClick(_user, _pass, _score);
             this.Close();
 
         }

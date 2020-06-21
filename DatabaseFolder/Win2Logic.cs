@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace secondtryatmaths
 {
@@ -56,62 +57,68 @@ namespace secondtryatmaths
 
 
 
-        public static void alteredSaveClick(string User, string pass, int score)
+        public static void alteredSaveClick(string UserString, string pass, int score)
         {
 
-
-
+           // if the username already exists, only update their score, don't make a new account
 
             using (var db = new UserDetailsContext())
             {
 
-
-                var user = new User()
+                var MatchCount = db.Users.Count(u => u.Name == UserString);
+                if (MatchCount > 0)
                 {
-                    Name = User,
-                    Password = pass
-                };
 
-                var uScore = new UserScore()
+                    UserScore scoreQuery =
+                    (from userq in db.Users
+                     join scoreq in db.Scores
+                     on userq.UserId equals scoreq.User.UserId
+                     where userq.Name == UserString
+                     select scoreq).SingleOrDefault();
+
+
+                    scoreQuery.Score = score;
+
+                    db.SaveChanges();
+                }
+
+               
+        
+                    
+
+                
+                else
                 {
-                    Score = score,
-                    User = user
+                    var user = new User()
+                    {
+                        Name = UserString,
+                        Password = pass
+                    };
 
-                };
+                    var uScore = new UserScore()
+                    {
+                        Score = score,
+                        User = user
 
-                db.Users.Add(user);
+                    };
 
-                db.Scores.Add(uScore);
+                    db.Users.Add(user);
+
+                    db.Scores.Add(uScore);
 
 
 
-                db.SaveChanges();
+                    db.SaveChanges();
+
+                }
+
             }
 
 
             Window3 win3 = new Window3();
             win3.Show();
 
-
-
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
