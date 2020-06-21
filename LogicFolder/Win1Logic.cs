@@ -36,8 +36,8 @@ namespace secondtryatmaths
         public static string rng()
         {
             Random rnd = new Random();
-            int first = rnd.Next(1, 10);
-            int second = rnd.Next(1, 10);
+            int first = rnd.Next(2, 13);
+            int second = rnd.Next(2, 13);
             StringBuilder sb = new StringBuilder();
             sb.Append(first);
             sb.Append('-');
