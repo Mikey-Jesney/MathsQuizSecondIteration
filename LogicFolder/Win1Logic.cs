@@ -36,8 +36,8 @@ namespace secondtryatmaths
         public static string rng()
         {
             Random rnd = new Random();
-            int first = rnd.Next(1, 99);
-            int second = rnd.Next(1, 99);
+            int first = rnd.Next(1, 10);
+            int second = rnd.Next(1, 10);
             StringBuilder sb = new StringBuilder();
             sb.Append(first);
             sb.Append('-');
@@ -70,7 +70,7 @@ namespace secondtryatmaths
 
             try
             {
-                if (int.Parse(answer) == int.Parse(b1) + int.Parse(b2))
+                if (int.Parse(answer) == int.Parse(b1) * int.Parse(b2))
                 {
                     return true;
                     

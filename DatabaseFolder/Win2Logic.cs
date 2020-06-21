@@ -76,8 +76,11 @@ namespace secondtryatmaths
                      where userq.Name == UserString
                      select scoreq).SingleOrDefault();
 
-
-                    scoreQuery.Score = score;
+                    if(scoreQuery.Score < score)
+                    {
+                        scoreQuery.Score = score;
+                    }
+                    else scoreQuery.Score = scoreQuery.Score;
 
                     db.SaveChanges();
                 }
