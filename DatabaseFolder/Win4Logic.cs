@@ -10,11 +10,10 @@ namespace secondtryatmaths
     {
 
         /*
-         * 
+         
          for users who already have an account
         logic will check to see if password matches the stored password for that username
         any errors return "details are incorrect" 
-
         
          */
 

@@ -22,6 +22,8 @@ namespace secondtryatmaths
 
 
 
+
+
         public static string populate()
         {
             string numbers = rng();
