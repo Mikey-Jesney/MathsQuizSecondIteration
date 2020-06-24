@@ -41,12 +41,9 @@ namespace secondtryatmaths
 
                 Window1 win1 = new Window1(UserBox.Text, PasswordBox.Password);
                 win1.Show();
-
                 this.Close();
 
             }
-
-
 
         }
 
